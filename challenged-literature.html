@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenged Literature - Unbound Pages</title>
+  <style>
+    /* Global Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; font-family: "Times New Roman", serif; }
+    /* Background & Overlay */
+    body {
+      background: url('images/bookshelf.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+    body::before {
+      content:"";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.5);
+      z-index: 1;
+    }
+    /* Main Container */
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      width: 90%;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 30px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content:"";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover { color: #555; }
+    nav a:hover::after { width: 100%; }
+    /* Title */
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      color: #333;
+      text-align: center;
+      position: relative;
+    }
+    .title::after {
+      content:"";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 1px;
+      background: #333;
+    }
+    /* Book Item */
+    .book-item {
+      border-left: 4px solid #bfa36f;
+      padding-left: 15px;
+      margin-bottom: 30px;
+    }
+    .book-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .book-item .quote {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+    .book-item p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container { padding: 30px 20px; }
+      .title { font-size: 2rem; }
+      .book-item h3, .book-item p, .book-item .quote { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="why-it-matters.html">Why It Matters</a>
+      <a href="take-action.html">Take Action</a>
+      <a href="challenged-literature.html" class="active">Challenged Literature</a>
+      <a href="news.html">News</a>
+      <a href="references.html">References</a>
+    </nav>
+    <!-- Page Title -->
+    <div class="title">CHALLENGED LITERATURE</div>
+    <!-- Book Items -->
+    <div class="book-item">
+      <h3>To Kill a Mockingbird by Harper Lee</h3>
+      <div class="quote">"You never really understand a person until you consider things from his point of view... until you climb into his skin and walk around in it."</div>
+      <p>Banned for racial slurs, depictions of racism, and perceived white savior themes. Often challenged for making people feel "uncomfortable."</p>
+    </div>
+    <div class="book-item">
+      <h3>I Know Why the Caged Bird Sings by Maya Angelou</h3>
+      <div class="quote">"There is no greater agony than bearing an untold story inside you."</div>
+      <p>Challenged for depictions of sexual abuse, racism, and offensive language. Considered too explicit in some school districts.</p>
+    </div>
+    <div class="book-item">
+      <h3>Of Mice and Men by John Steinbeck</h3>
+      <div class="quote">"A guy needs somebody—to be near him."</div>
+      <p>Banned for racial slurs, vulgar language, and perceived promotion of euthanasia. Frequently challenged in school curricula.</p>
+    </div>
+    <!-- (Additional book items follow the same format) -->
+    <div class="book-item">
+      <h3>Lolita by Vladimir Nabokov</h3>
+      <div class="quote">"Lolita, light of my life, fire of my loins. My sin, my soul."</div>
+      <p>Banned for its exploration of pedophilia, manipulation, and obsession. Still sparks debate over its literary merit versus disturbing content.</p>
+    </div>
+  </div>
+</body>
+</html>

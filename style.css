@@ -1,0 +1,510 @@
+/* Import Google Fonts for dual typeface look */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,400i,700');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------
+   BODY & BACKGROUND
+------------------------ */
+/* Use your bookshelf background and a fallback beige tone */
+body {
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #1b130d; /* Deep brown text */
+  line-height: 1.6;
+}
+
+/* ---------------------
+   HEADER & NAVIGATION
+------------------------ */
+/* Fixed header with a translucent beige background */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 253, 251, 0.95);  /* Light beige */
+  padding: 10px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(255, 253, 251, 0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header container to align content */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #4e3524;
+}
+
+/* Navigation styling */
+nav a {
+  text-decoration: none;
+  color: #4e3524;
+  margin-left: 20px;
+  padding: 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+  color: #7e5a3d; /* Medium brown */
+  border-bottom: 2px solid #7e5a3d;
+}
+
+/* ---------------------
+   HERO SECTION
+------------------------ */
+/* Full-screen hero with overlay for legibility */
+.hero {
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85); /* Beige overlay */
+  padding-top: 70px; /* Offset for fixed header */
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #4e3524;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #4e3524;
+  margin-bottom: 20px;
+}
+
+/* Button for hero and general use */
+.btn {
+  display: inline-block;
+  background-color: #7e5a3d;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #9a7b56;
+}
+
+/* ---------------------
+   MAIN CONTENT AREAS
+------------------------ */
+/* Shared styling for pages like About, Why It Matters, Take Action, Challenged Literature, and References */
+.main-content {
+  max-width: 1200px;
+  margin: 100px auto 80px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.main-content section {
+  margin-bottom: 40px;
+}
+
+.main-content section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4e3524;
+}
+
+.main-content section p,
+.main-content section ul {
+  font-size: 1rem;
+  color: #4e3524;
+  margin-bottom: 15px;
+}
+
+/* Specific list styling for References */
+.main-content ul {
+  list-style: disc inside;
+}
+
+/* ---------------------
+   BANNED BOOKS STATS SECTION
+------------------------ */
+.banned-stats {
+  max-width: 1200px;
+  margin: 100px auto 80px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.banned-stats h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #4e3524;
+}
+
+.banned-stats p {
+  font-size: 1.2rem;
+  color: #4e3524;
+  margin-bottom: 10px;
+}
+
+/* ---------------------
+   NEWS SECTION
+------------------------ */
+.news-section {
+  max-width: 1200px;
+  margin: 100px auto 80px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.news-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4e3524;
+}
+
+/* Styling for individual news articles */
+.news-article {
+  background: #fff;
+  border: 1px solid #d9c8b4;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-article:hover {
+  transform: translateY(-5px);
+}
+
+.news-article img {
+  width: 100%;
+  display: block;
+}
+
+.news-article h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 15px;
+  color: #4e3524;
+}
+
+.news-article p {
+  margin: 0 15px 15px;
+  color: #4e3524;
+}
+
+.news-article a {
+  display: inline-block;
+  margin: 0 15px 15px;
+  padding: 8px 12px;
+  background: #7e5a3d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.news-article a:hover {
+  background: #9a7b56;
+}
+
+/* ---------------------
+   VIDEO GRID (Why It Matters page)
+------------------------ */
+.grid-two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------------------
+   FOOTER
+------------------------ */
+footer {
+  width: 100%;
+  background: rgba(245, 239, 230, 0.95);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #d9c8b4;
+  position: relative;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #4e3524;
+}
+
+/* ---------------------
+   RESPONSIVE ADJUSTMENTS
+------------------------ */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .main-content,
+  .banned-stats,
+  .news-section {
+    margin: 120px 20px 80px;
+  }
+}
+/* Global reset and fonts remain unchanged */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,400i,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------
+   BODY & BACKGROUND
+------------------------ */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #4e3524; /* Deep brown text */
+  line-height: 1.6;
+  /* Fallback background color */
+  background-color: #f5efe6;
+}
+
+/* ---------------------
+   HEADER & NAVIGATION (unchanged)
+------------------------ */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 239, 230, 0.95);  /* Light beige */
+  padding: 10px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(245, 239, 230, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #4e3524;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4e3524;
+  margin-left: 20px;
+  padding: 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+  color: #7e5a3d; /* Medium brown */
+  border-bottom: 2px solid #7e5a3d;
+}
+
+/* ---------------------
+   HERO SECTION WITH BACKGROUND IMAGE
+------------------------ */
+.hero {
+  background: url('bookshelf.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* Offset for fixed header */
+}
+
+/* Box styling for title & button */
+.hero-box {
+  background: rgba(255, 255, 255, 0.85);  /* Semi-transparent white */
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #4e3524;
+  margin-bottom: 20px;
+}
+
+.hero-box p {
+  font-size: 1.2rem;
+  color: #4e3524;
+  margin-bottom: 20px;
+}
+
+/* ---------------------
+   BUTTON STYLING
+------------------------ */
+.btn {
+  display: inline-block;
+  background-color: #7e5a3d;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #9a7b56;
+}
+
+/* ---------------------
+   MAIN CONTENT & OTHER SECTIONS
+------------------------ */
+.banned-stats, .main-content, .news-section {
+  max-width: 1200px;
+  margin: 100px auto 80px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+/* Section Headings */
+.banned-stats h2,
+.main-content h2,
+.news-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4e3524;
+}
+
+/* ---------------------
+   FOOTER
+------------------------ */
+footer {
+  width: 100%;
+  background: rgba(245, 239, 230, 0.95);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #d9c8b4;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #4e3524;
+}
+
+/* ---------------------
+   RESPONSIVE ADJUSTMENTS
+------------------------ */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+  }
+  
+  .hero-box h1 {
+    font-size: 2.5rem;
+  }
+  
+  .banned-stats, .main-content, .news-section {
+    margin: 120px 20px 80px;
+  }
+}
